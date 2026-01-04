@@ -1,0 +1,90 @@
+@import "./font.css";
+
+:root {
+    --neutral-0: rgba(255, 255, 255, 100%);
+    --neutral-100: rgba(251, 251, 251, 100%);
+    --neutral-200: rgba(243, 243, 243, 100%);
+    --neutral-300: rgba(236, 236, 236, 100%);
+    --neutral-400: rgba(191, 191, 191, 100%);
+    --neutral-500: rgba(140, 140, 140, 100%);
+    --neutral-600: rgba(108, 108, 108, 100%);
+    --neutral-700: rgba(57, 57, 57, 100%);
+    --neutral-800: rgba(28, 28, 28, 100%);
+    --neutral-900: rgba(20, 20, 20, 100%);
+
+    --primary-0: rgba(254, 244, 244, 100%);
+    --primary-100: rgba(255, 206, 206, 100%);
+    --primary-200: rgba(252, 169, 169, 100%);
+    --primary-300: rgba(242, 89, 89, 100%);
+    --primary-400: rgba(213, 16, 16, 100%);
+    --primary-500: rgba(166, 12, 12, 100%);
+    --primary-600: rgba(118, 9, 9, 100%);
+    --primary-logo: linear-gradient(
+        135deg, 
+        var(--primary-400), 
+        var(--primary-500)
+    );
+
+    --base-black: rgba(0, 0, 0, 100%);
+}
+
+.heading-h1 {
+    font-family: 'Source Sans 3';
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+}
+.heading-h2 {
+    font-family: 'Source Sans 3';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+}
+.heading-h3 {
+    font-family: 'Source Sans 3';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+}
+.body-lg-semibold {
+    font-family: 'Source Sans 3';
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+}
+.body-lg-regular {
+    font-family: 'Source Sans 3';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+}
+.body-md-bold {
+    font-family: 'Source Sans 3';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+}
+.body-md-semibold {
+    font-family: 'Source Sans 3';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+}
+.body-md-regular {
+    font-family: 'Source Sans 3';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+.body-sm-semibold {
+    font-family: 'Source Sans 3';
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+}
+.body-sm-regular {
+    font-family: 'Source Sans 3';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
