@@ -1,0 +1,7 @@
+.content {
+    display: grid;
+    grid-template-columns: 204px minmax(676px, 1fr) 400px;
+    height: calc(100% - 64px);
+    overflow-x: auto;
+    overflow-y: hidden;
+}

@@ -1,0 +1,11 @@
+.section {
+    flex: 1;
+    height: calc(100vh - 64px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.title {
+    padding: 24px;
+}

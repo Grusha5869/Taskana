@@ -1,5 +1,10 @@
+import TaskListDone from "../taskListDone/TaskListDone"
+import style from './taskList.module.css'
+
 export default function TaskList() {
-    return (
-        <ul></ul>
+    return ( 
+        <div className={style.wrapper}>
+            <TaskListDone />
+        </div>
     )
 }
