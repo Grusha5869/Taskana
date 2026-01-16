@@ -1,6 +1,5 @@
 import styles from './header.module.css'
-import { Button } from '../button/Button.jsx'
-import Logo from '../logo/Logo.jsx'
+import { Button, Logo } from "@/components";
 
 export default function Header() {
     return (

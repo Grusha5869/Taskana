@@ -1,4 +1,4 @@
-import TaskListDone from "../taskListDone/TaskListDone"
+import { TaskListDone } from '@/components'
 import style from './taskList.module.css'
 
 export default function TaskList() {

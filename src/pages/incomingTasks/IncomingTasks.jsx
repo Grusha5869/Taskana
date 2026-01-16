@@ -1,6 +1,4 @@
-import MainContainer from "../../components/mainContainer/MainContainer"
-import Footer from "../../components/footer/Footer"
-import TaskList from "../../components/taskList/TaskList"
+import { Footer, TaskList, MainContainer } from "@/components"
 import style from "./incomingTasks.module.css"
 
 export default function IncomingTasks() {

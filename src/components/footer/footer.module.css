@@ -1,5 +1,5 @@
 .footer {
-  padding: 16px 24px;
+  padding: 26px 24px 0 24px; 
   display: flex;
   gap: 4px;
   color: var(--neutral-600);
@@ -15,4 +15,12 @@
 .link {
   margin-left: 3px;
   text-decoration: underline;
+  color: var(--neutral-600);
+}
+
+
+@media (max-width: 1600px) {
+    .footer {
+        padding: 15px 24px 0 24px; 
+    }
 }

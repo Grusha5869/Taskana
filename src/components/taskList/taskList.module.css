@@ -1,4 +1,7 @@
 .wrapper {
-    overflow: auto;
-    min-height: 0;
+    overflow-y: hidden;
 }
+
+/* @media (max-height: 850px) {
+    .wrapper { overflow-y: auto; }
+} */

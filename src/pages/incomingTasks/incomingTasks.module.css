@@ -8,4 +8,13 @@
 
 .title {
     padding: 24px;
+    margin-bottom: 185px;
+    position: sticky;
+    top: 0;
+}
+
+@media (max-width: 1600px) {
+    .title {
+        margin-bottom: 97px;
+    }
 }

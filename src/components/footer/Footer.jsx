@@ -5,7 +5,7 @@ export default function Footer() {
         <footer className={style.footer}>
             <p className={"body-md-regular " + style.text}>
                 Проект выполнен в рамках стажировки
-                <a className={style.link} href="http://www.preax.ru">
+                <a className={"body-md-regular " + style.link} href="http://www.preax.ru" target="_blank" rel="noopener noreferrer">
                 PREAX
                 </a>
             </p>
