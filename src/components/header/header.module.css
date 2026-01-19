@@ -5,11 +5,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 16px;
+    padding: 0px 24px 0 16px;
 }
 
 @media (max-width: 1600px) {
     .header {
-        padding: 4px 24px 0 16px;
+        padding: 0px 24px 0 16px;
     }
 }

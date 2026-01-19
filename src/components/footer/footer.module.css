@@ -1,5 +1,5 @@
 .footer {
-  padding: 26px 24px 0 24px; 
+  padding: 15px 24px 0 24px; 
   display: flex;
   gap: 4px;
   color: var(--neutral-600);
@@ -19,8 +19,8 @@
 }
 
 
-@media (max-width: 1600px) {
+/* @media (max-width: 1600px) {
     .footer {
         padding: 15px 24px 0 24px; 
     }
-}
+} */
