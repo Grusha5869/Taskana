@@ -4,7 +4,7 @@ export default function TaskListDone() {
     return (
         <div className={style.wrapper}>
             <div>
-                <h2 className={"heading-h2 " + style.subtitle}>Все твои задачи организованы как надо</h2>
+                <h2 className={"heading-h2 " + style.subtitle}>Все твои задачи организованы как надо</h2>
                 <p className={"body-lg-regular " + style.text}>Отличная работа! Ты большой молодец!</p>
             </div>
             <div className={style.imgWrapper}>

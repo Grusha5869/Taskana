@@ -1,7 +1,13 @@
 .container {
     width: 76%;
+    max-width: 996px;
+    min-height: 0;
     margin: 0 auto;
-    overflow-y: auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    
 }
 
 @media (max-width: 1600px) {

@@ -1,9 +1,8 @@
 .wrapper {
-    overflow-y: hidden;
+    min-height: 0;
+    overflow-y: auto;
     display: flex;
     justify-content: center;
+    margin: auto 0;
 }
 
-/* @media (max-height: 850px) {
-    .wrapper { overflow-y: auto; }
-} */
