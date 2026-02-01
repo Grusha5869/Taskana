@@ -10,10 +10,29 @@
 
 .subtitle {
     text-align: center;
+    transition: 0.2s;
 }
+
+.subtitleLight {
+    color: var(--neutral-light-800);
+}
+ 
+.subtitleDark {
+    color: var(--neutral-dark-800);
+}
+
 
 .text {
     text-align: center;
+    transition: 0.2s;
+}
+
+.textLight {
+    color: var(--neutral-light-800);
+}
+
+.textDark {
+    color: var(--neutral-dark-800);
 }
 
 .img {
@@ -24,5 +43,9 @@
 .imgWrapper {
     width: 463px;
     height: 319px;
+}
+
+.imgWrapper path {
+    transition: 0.2s;
 }
 

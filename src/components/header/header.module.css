@@ -5,6 +5,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 24px 0 16px;
+    padding: 2px 23px 0px 17px;
     z-index: 100;
+    box-shadow: 2px 2px 4px var(--base-black);
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    gap: 24px;
 }

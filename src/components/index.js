@@ -1,4 +1,4 @@
-export { Button } from "./button/Button";
+export { Button, NavButton } from "./button/Button";
 export { default as Content } from "./content/Content"
 export { default as Footer } from "./footer/Footer"
 export { default as Header } from "./header/Header"
@@ -9,3 +9,4 @@ export { default as SideBar } from "./sideBar/SideBar";
 export { default as Statistic } from "./statistic/Statistic";
 export { default as TaskList } from "./taskList/TaskList";
 export { default as TaskListDone } from "./taskListDone/TaskListDone";
+export { default as ThemeSwitcher } from "./themeSwitcher/ThemeSwitcher";

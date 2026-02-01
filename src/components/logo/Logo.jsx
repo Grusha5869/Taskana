@@ -1,9 +1,16 @@
 import style from './logo.module.css'
+import Illustration from '../illustration/Illustration'
 
-export default function Logo() {
+export default function Logo({ onFocus, onBlur }) {
     return (
-        <a href="/">
-            <img src="/logo.png" alt="Логотип" className={style.logo} />
+        <a 
+            onFocus={onFocus} 
+            onBlur={onBlur} 
+            href="/" 
+            className={style.link} 
+            tabIndex={1}
+        >
+            <Illustration name='logo' />
         </a>
     )
 }

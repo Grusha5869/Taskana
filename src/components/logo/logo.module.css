@@ -1,4 +1,17 @@
+.link {
+    display: flex;
+    border-radius: 8px;
+    transition: 0.2s;
+    outline: 2px solid transparent;
+    outline-offset: 4px;
+}
+
 .logo {
     width: 126px;
     height: 40px;
 }
+
+.link:focus-visible {
+    outline-color: var(--base-white);
+}
+

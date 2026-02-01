@@ -2,13 +2,73 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 8px 16px 8px 12px;
+    padding: 9px 12px 7px 14px;
     gap: 8px;
     width: 118px;
     height: 40px;
     background: var(--primary-400);
     border-radius: 8px;
-    color: var(--neutral-0);
+    color: var(--neutral-light-0);
     border: none;
     cursor: pointer;
+    box-shadow: var(--dark-base-default);
+    transition: 0.2s;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+}
+
+.buttonHover {
+    background: var(--primary-500);
+    box-shadow: var(--dark-base-hover);
+}
+
+.button:focus-visible {
+    outline-color: var(--base-white);
+}
+
+.navBtn {
+    width: 172px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    padding: 0;
+    transition: 0.2s;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+}
+
+.navBtnLight {
+    background: var(--neutral-light-800);
+    box-shadow: var(--light-base-default);
+}
+
+.navBtnDark {
+    background: var(--neutral-dark-800);
+    box-shadow: var(--dark-base-default);
+}
+
+.navBtnLight:hover {
+    background: var(--neutral-light-700);
+    box-shadow: var(--light-base-hover);
+}
+
+.navBtnLight:focus-visible {
+    outline-color: var(--neutral-light-900);
+    background: var(--neutral-light-700);
+    box-shadow: var(--light-base-hover);
+}
+
+.navBtnDark:hover {
+    background: var(--neutral-dark-700);
+    box-shadow: var(--dark-base-hover);
+} 
+
+.navBtnDark:focus-visible {
+    outline-color: var(--neutral-dark-900);
+    background: var(--neutral-dark-700);
+    box-shadow: var(--dark-base-hover);
+}
+
+.clickBtn {
+    background: var(--primary-300);
 }

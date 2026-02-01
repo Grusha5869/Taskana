@@ -10,17 +10,48 @@
 
 .text {
   margin-inline: auto;
+  transition: 0.2s;
+}
+
+.textLight {
+  color: var(--neutral-light-600);
+}
+
+.textDark {
+  color: var(--neutral-dark-600);
 }
 
 .link {
   margin-left: 3px;
   text-decoration: underline;
-  color: var(--neutral-600);
+  transition: 0.2s;
+  outline: 2px solid transparent;
+  outline-offset: 4px;
+  border-radius: 4px;
 }
 
+.linkLight {
+  color: var(--neutral-light-600);
+}
 
-/* @media (max-width: 1600px) {
-    .footer {
-        padding: 15px 24px 0 24px; 
-    }
-} */
+.linkLight:hover {
+  color: var(--neutral-light-800);
+}
+
+.linkLight:focus-visible {
+  color: var(--neutral-light-800);
+  outline-color: var(--neutral-light-900);
+}
+
+.linkDark {
+  color: var(--neutral-dark-600);
+}
+
+.linkDark:hover {
+  color: var(--neutral-dark-800);
+}
+
+.linkDark:focus-visible {
+  color: var(--neutral-dark-800);
+  outline-color: var(--neutral-dark-900);
+}

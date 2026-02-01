@@ -22,6 +22,10 @@ p {
     margin: 0;
 }
 
+ul {
+    padding: 0;
+}
+
 .heading-h1 {
     font-family: 'Source Sans 3';
     font-weight: 700;

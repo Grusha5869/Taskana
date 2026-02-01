@@ -2,4 +2,13 @@
     width: 352px;
     height: 72px;
     text-align: center;
+    transition: 0.2s;
+}
+
+.textLight {
+    color: var(--neutral-light-800);
+}
+
+.textDark {
+    color: var(--neutral-dark-800);
 }

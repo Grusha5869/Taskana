@@ -1,0 +1,51 @@
+.button {
+    border: none;
+    background: var(--base-800);
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    gap: 4px;
+    width: 76px;
+    height: 40px;
+    box-shadow: var(--dark-base-default);
+    border-radius: 8px;  
+    cursor: pointer;
+    transition: 0.2s;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    transition: 0.2s;
+}
+
+.active {
+    background: var(--primary-400);
+    box-shadow: var(--dark-base-default);
+    transition: 0.2s;
+}
+
+.button:hover .active {
+    background: var(--base-white);
+}
+
+.button:hover .active path {
+    fill: var(--base-900);
+}
+
+.button:focus-visible {
+    outline-color: var(--base-white);
+}
+.button:focus-visible .active {
+    background: var(--base-white);
+}
+.button:focus-visible .active path {
+    fill: var(--base-900);
+}
