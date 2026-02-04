@@ -1,4 +1,4 @@
-export default function BookIllustration({fill, className, ...props}) {
+export default function BookIllustration({className, ...props}) {
     const {fillBg, fill300, fill700, fillPrimary} = props.props;
 
     return (

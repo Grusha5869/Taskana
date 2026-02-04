@@ -7,7 +7,7 @@ import { classNameString } from '../../utils/helpers'
 
 
 export default function SideBar() {
-    const {theme, toggleTheme} = useContext(ThemeContext);
+    const {theme} = useContext(ThemeContext);
 
     return (
         <aside className={classNameString(style.rightArea, theme === 'light' ? style.rightAreaLight : style.rightAreaDark)}>

@@ -7,7 +7,7 @@ import { ThemeContext } from "@/context"
 export default function TaskListDone() {
     const {theme} = useContext(ThemeContext)
     return (
-        <div className={style.wrapper}>
+        <div  className={style.wrapper}>
             <div>
                 <h2 className={classNameString("heading-h2", style.subtitle, theme === 'light' ? style.subtitleLight : style.subtitleDark)}>Все твои задачи организованы как надо</h2>
                 <p className={classNameString("body-lg-regular", style.text, theme === 'light' ? style.textLight : style.textDark)}>Отличная работа! Ты большой молодец!</p>

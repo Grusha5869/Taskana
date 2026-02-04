@@ -4,4 +4,5 @@
     height: calc(100% - 64px);
     overflow-x: auto;
     overflow-y: hidden;
+    transition: var(--transition-default);
 }

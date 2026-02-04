@@ -10,7 +10,7 @@
     box-shadow: var(--dark-base-default);
     border-radius: 8px;  
     cursor: pointer;
-    transition: 0.2s;
+    transition: var(--transition-default);
     outline: 2px solid transparent;
     outline-offset: 2px;
 }
@@ -23,13 +23,13 @@
     width: 32px;
     height: 32px;
     border-radius: 4px;
-    transition: 0.2s;
+    transition: var(--transition-default);
 }
 
 .active {
     background: var(--primary-400);
     box-shadow: var(--dark-base-default);
-    transition: 0.2s;
+    transition: var(--transition-default);
 }
 
 .button:hover .active {

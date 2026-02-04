@@ -5,9 +5,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2px 23px 0px 17px;
-    z-index: 100;
-    box-shadow: 2px 2px 4px var(--base-black);
+    padding: 1px 24px 0px 17px;
+    z-index: 200;
+    transition: var(--transition-default);
+}
+
+.headerLight {
+    box-shadow: var(--light-base-default)
+}
+
+.headerDark {
+    box-shadow: var(--dark-base-default)
 }
 
 .wrapper {

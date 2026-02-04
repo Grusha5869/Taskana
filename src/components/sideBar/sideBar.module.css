@@ -1,15 +1,14 @@
 .rightArea {
-    width: 400px;
     display: flex;
     overflow: hidden;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: 0.2s;
+    transition: var(--transition-default);
 }
 
 .rightArea path {
-    transition: 0.2s;
+    transition: var(--transition-default);
 }
 
 .rightAreaLight {
@@ -23,6 +22,7 @@
 }
 
 .wrapper {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -30,6 +30,13 @@
     gap: 24px;
     overflow-y: auto;
     min-height: 0;
+    outline: 2px solid transparent;
+    transition: var(--transition-default);
+}
+
+.wrapper:focus-visible {
+    outline-offset: -1px;
+    outline-color: var(--base-black);
 }
 
 .wrapperImg {
@@ -41,5 +48,5 @@
 }
 
 .svg {
-    transition: 0.2s;
+    transition: var(--transition-default);
 }

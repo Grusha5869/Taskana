@@ -1,4 +1,4 @@
-export default function Moon({fill, ...props}) {
+export default function Moon({fill}) {
     return (
         <svg 
             width="14" 

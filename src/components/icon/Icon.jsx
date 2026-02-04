@@ -12,7 +12,7 @@ const iconsAll = {
     load: Load,
 }
 
-export default function Icon({name, fill, ...props}) {
+export default function Icon({name, fill}) {
     const Icon = iconsAll[name];
     if (!Icon) {
         console.warn(`Не получилось найти иконку - ${name}`)

@@ -6,7 +6,7 @@ import { ThemeContext } from '@/context'
 import { classNameString } from '../../utils/helpers'
 
 export default function NavBar() {
-    const {theme, toggleTheme} = useContext(ThemeContext)
+    const {theme} = useContext(ThemeContext)
 
     return (
         <nav className={classNameString(style.wrapper, theme === 'light' ? style.wrapperLight : style.wrapperDark)}>

@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     padding: 9px 12px 7px 14px;
-    gap: 8px;
+    gap: 11px;
     width: 118px;
     height: 40px;
     background: var(--primary-400);
@@ -12,7 +12,7 @@
     border: none;
     cursor: pointer;
     box-shadow: var(--dark-base-default);
-    transition: 0.2s;
+    transition: var(--transition-default);
     outline: 2px solid transparent;
     outline-offset: 2px;
 }
@@ -26,13 +26,17 @@
     outline-color: var(--base-white);
 }
 
+.text {
+    color: var(--base-white);
+}
+
 .navBtn {
     width: 172px;
     height: 40px;
     border: none;
     border-radius: 8px;
     padding: 0;
-    transition: 0.2s;
+    transition: var(--transition-default);
     outline: 2px solid transparent;
     outline-offset: 2px;
 }

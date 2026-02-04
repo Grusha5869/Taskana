@@ -49,5 +49,6 @@
     --dark-base-hover: 2px 8px 12px rgba(0, 0, 0, 0.8);
     --dark-sm-default: 2px 2px 4px rgba(0, 0, 0, 0.3);
     --dark-sm-hover: 2px 8px 12px rgba(0, 0, 0, 0.6);
+
+    --transition-default: 0.2s
 }
- 

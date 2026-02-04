@@ -11,10 +11,17 @@ export const Button = ({ text, tabIndex }) => {
     const [clickLoad, setClickLoad] = useState(false);
     const [btnFinish, setBtnFinish] = useState(false);
 
+    function clickFinish(callback) {
+        callback()
+    }
+
     useEffect(() => {
         if (!clickLoad && btnFinish) {
             BtnRef.current.style.opacity = '0.5';
-            setClickCheck(false)
+            
+            clickFinish(() => {
+                setClickCheck(false)
+            })
         }
     }, [clickLoad, btnFinish])
 
@@ -58,7 +65,7 @@ export const Button = ({ text, tabIndex }) => {
             {clickLoad ? <Icon name='load' fill='var(--base-white)' /> : (
                 <>
                     <Icon name='plus' fill='var(--base-white)' />
-                    <p>{text}</p>
+                    <p className={classNameString('body-md-semibold', style.text)}>{text}</p>
                 </>
             )}
         </button>
@@ -66,7 +73,7 @@ export const Button = ({ text, tabIndex }) => {
 }
 
 export const NavButton = ({ children, tabIndex }) => {
-    const {theme, toggleTheme} = useContext(ThemeContext)
+    const {theme} = useContext(ThemeContext)
     return (
         <button 
             tabIndex={tabIndex}

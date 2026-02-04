@@ -1,4 +1,4 @@
-export default function FemaleIllustration({fill, ...props}) {
+export default function FemaleIllustration({...props}) {
     const {fill300, fill900, fillPrimary100, fillPrimary300, fillPrimary400} = props.props;
     
     return (

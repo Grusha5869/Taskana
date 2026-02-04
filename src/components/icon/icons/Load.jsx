@@ -1,4 +1,4 @@
-export default function Load({fill, ...props}) {
+export default function Load({fill}) {
     return (
         <svg 
             width="15" 

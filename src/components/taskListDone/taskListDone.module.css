@@ -6,11 +6,12 @@
     height: 100%;
     max-width: 463px;
     padding-bottom: 45px;
+    transition: var(--transition-default);
 }
-
+    
 .subtitle {
     text-align: center;
-    transition: 0.2s;
+    transition: var(--transition-default);
 }
 
 .subtitleLight {
@@ -24,7 +25,7 @@
 
 .text {
     text-align: center;
-    transition: 0.2s;
+    transition: var(--transition-default);
 }
 
 .textLight {
@@ -46,6 +47,6 @@
 }
 
 .imgWrapper path {
-    transition: 0.2s;
+    transition: var(--transition-default);
 }
 
