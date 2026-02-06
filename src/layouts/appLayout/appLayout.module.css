@@ -1,14 +1,12 @@
 .layout {
-    overflow-x: auto;
     width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    min-width: 1280px;
 }
 
-@media (max-width: 1280px) {
+/* @media (max-width: 1280px) {
     .layout {
         min-width: 0;
     }
-}
+} */

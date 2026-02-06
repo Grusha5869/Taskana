@@ -17,7 +17,7 @@
     background-color: var(--neutral-dark-0);
 }
 
-.wrapper {
+.section {
     position: relative;
     flex: 1;
     max-width: 996px;

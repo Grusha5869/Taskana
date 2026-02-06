@@ -34,18 +34,23 @@
 
 .button:hover .active {
     background: var(--base-white);
+    transition: var(--transition-default);
 }
 
 .button:hover .active path {
     fill: var(--base-900);
+    transition: var(--transition-default);
 }
 
 .button:focus-visible {
     outline-color: var(--base-white);
+    transition: var(--transition-default);
 }
 .button:focus-visible .active {
     background: var(--base-white);
+    transition: var(--transition-default);
 }
 .button:focus-visible .active path {
     fill: var(--base-900);
+    transition: var(--transition-default);
 }

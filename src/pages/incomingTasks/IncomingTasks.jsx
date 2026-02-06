@@ -10,10 +10,10 @@ export default function IncomingTasks() {
     return (
         <main className={classNameString(style.main, theme === 'light' ? style.mainLight : style.mainDark)}>
             <MainContainer>
-                <div className={style.wrapper}>
+                <section className={style.section}>
                     <h1 className={classNameString('heading-h1', style.title, theme === 'light' ? style.titleLight : style.titleDark)}>Входящие</h1>
                     <TaskList />
-                </div>
+                </section>
             </MainContainer>
             <Footer />
         </main>

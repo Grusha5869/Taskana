@@ -25,11 +25,13 @@
     margin-top: 23px;
     list-style: none;
     transition: var(--transition-default);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 } 
 
 .listElem {
     width: 100%;
-    height: 100%;
     transition: var(--transition-default);
 }
 

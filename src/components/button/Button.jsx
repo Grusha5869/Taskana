@@ -18,6 +18,8 @@ export const Button = ({ text, tabIndex }) => {
     useEffect(() => {
         if (!clickLoad && btnFinish) {
             BtnRef.current.style.opacity = '0.5';
+            BtnRef.current.style.disabled = true
+            console.log(BtnRef.current.style.disabled);
             
             clickFinish(() => {
                 setClickCheck(false)
@@ -35,10 +37,12 @@ export const Button = ({ text, tabIndex }) => {
     }
 
     function mouseEnterBtn() {
+        if (btnFinish) return
         setMouseEnter(true)
     }
 
     function mouseLeaveBtn() {
+        if (btnFinish) return
         setMouseEnter(false)
     }
 
@@ -59,7 +63,6 @@ export const Button = ({ text, tabIndex }) => {
             type='button' 
             className={classNameString('body-md-semibold', style.button, mouseEnter && style.buttonHover,  clickCheck && style.clickBtn)}
             tabIndex={tabIndex}
-            disabled={clickLoad}
         >
             
             {clickLoad ? <Icon name='load' fill='var(--base-white)' /> : (

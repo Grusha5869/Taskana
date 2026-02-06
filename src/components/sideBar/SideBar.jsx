@@ -11,7 +11,7 @@ export default function SideBar() {
 
     return (
         <aside className={classNameString(style.rightArea, theme === 'light' ? style.rightAreaLight : style.rightAreaDark)}>
-            <div className={style.wrapper} tabIndex={6}>
+            <div className={style.wrapper}>
                 <div className={style.wrapperImg}>
                     <Illustration name='book'
                     className={style.svg}
