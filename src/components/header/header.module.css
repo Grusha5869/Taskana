@@ -5,17 +5,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1px 24px 0px 17px;
+    padding: 0px 24px 0px 16px;
     z-index: 200;
     transition: var(--transition-default);
-}
-
-.headerLight {
     box-shadow: var(--light-base-default)
-}
-
-.headerDark {
-    box-shadow: var(--dark-base-default)
 }
 
 .wrapper {

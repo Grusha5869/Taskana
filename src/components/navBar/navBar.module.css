@@ -5,20 +5,12 @@
     align-items: center;
     overflow-y: auto;
     transition: var(--transition-default);
+    background-color: var(--neutral-100);
+    border-right: 1px solid var(--neutral-300);
 }
 
 .wrapper path {
     transition: var(--transition-default);
-}
-
-.wrapperLight {
-    background-color: var(--neutral-light-100);
-    border-right: 1px solid var(--neutral-light-300);
-}
-
-.wrapperDark {
-    background-color: var(--neutral-dark-100);
-    border-right: 1px solid var(--neutral-dark-300);
 }
 
 .list {
@@ -35,16 +27,10 @@
     transition: var(--transition-default);
 }
 
-.textLight {
-    color: var(--neutral-light-0);
+.text {
+    color: var(--neutral-0);
     transition: var(--transition-default);
 }
-
-.textDark {
-    color: var(--neutral-dark-0);
-    transition: var(--transition-default);
-}
-
 
 .link {
     display: flex;

@@ -24,6 +24,8 @@
 
 .button:focus-visible {
     outline-color: var(--base-white);
+    background: var(--primary-500);
+    box-shadow: var(--dark-base-hover);
 }
 
 .text {
@@ -39,38 +41,25 @@
     transition: var(--transition-default);
     outline: 2px solid transparent;
     outline-offset: 2px;
+    background: var(--neutral-800);
+    box-shadow: var(--shadow-base-default);
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    cursor: pointer;
+    padding: 1px 13px;
+    transition: var(--transition-default);
 }
 
-.navBtnLight {
-    background: var(--neutral-light-800);
-    box-shadow: var(--light-base-default);
+.navBtn:hover {
+    background: var(--neutral-700);
+    box-shadow: var(--shadow-base-hover);
 }
 
-.navBtnDark {
-    background: var(--neutral-dark-800);
-    box-shadow: var(--dark-base-default);
-}
-
-.navBtnLight:hover {
-    background: var(--neutral-light-700);
-    box-shadow: var(--light-base-hover);
-}
-
-.navBtnLight:focus-visible {
-    outline-color: var(--neutral-light-900);
-    background: var(--neutral-light-700);
-    box-shadow: var(--light-base-hover);
-}
-
-.navBtnDark:hover {
-    background: var(--neutral-dark-700);
-    box-shadow: var(--dark-base-hover);
-} 
-
-.navBtnDark:focus-visible {
-    outline-color: var(--neutral-dark-900);
-    background: var(--neutral-dark-700);
-    box-shadow: var(--dark-base-hover);
+.navBtn:focus-visible {
+    outline-color: var(--neutral-900);
+    background: var(--neutral-700);
+    box-shadow: var(--shadow-base-hover);
 }
 
 .clickBtn {

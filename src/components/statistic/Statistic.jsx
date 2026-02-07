@@ -1,8 +1,8 @@
 import style from "./statistic.module.css"
 import { classNameString } from '../../utils/helpers'
 
-export default function Statistic({ theme }) {
+export default function Statistic() {
     return (
-        <p className={classNameString('body-md-regular', style.text, theme === 'light' ? style.textLight : style.textDark)}>Здесь мы поможем тебе управлять твоими задачами, отслеживать статистику и самочувствие.</p>
+        <p className={classNameString('body-md-regular', style.text)}>Здесь мы поможем тебе управлять твоими задачами, отслеживать статистику и самочувствие.</p>
     )
 }

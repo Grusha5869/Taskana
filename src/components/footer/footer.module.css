@@ -11,15 +11,8 @@
 
 .text {
   margin-inline: auto;
+  color: var(--neutral-600);
   transition: var(--transition-default);
-}
-
-.textLight {
-  color: var(--neutral-light-600);
-}
-
-.textDark {
-  color: var(--neutral-dark-600);
 }
 
 .link {
@@ -29,30 +22,15 @@
   outline: 2px solid transparent;
   outline-offset: 4px;
   border-radius: 4px;
+  color: var(--neutral-600);
 }
 
-.linkLight {
-  color: var(--neutral-light-600);
+.link:hover {
+  color: var(--neutral-800);
 }
 
-.linkLight:hover {
-  color: var(--neutral-light-800);
+.link:focus-visible {
+  color: var(--neutral-800);
+  outline-color: var(--neutral-900);
 }
 
-.linkLight:focus-visible {
-  color: var(--neutral-light-800);
-  outline-color: var(--neutral-light-900);
-}
-
-.linkDark {
-  color: var(--neutral-dark-600);
-}
-
-.linkDark:hover {
-  color: var(--neutral-dark-800);
-}
-
-.linkDark:focus-visible {
-  color: var(--neutral-dark-800);
-  outline-color: var(--neutral-dark-900);
-}

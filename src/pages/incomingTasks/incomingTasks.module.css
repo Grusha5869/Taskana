@@ -7,14 +7,7 @@
     overflow-y: hidden;
     overflow: auto;
     transition: var(--transition-default);
-}
-
-.mainLight {
-    background-color: var(--neutral-light-0);
-}
-
-.mainDark {
-    background-color: var(--neutral-dark-0);
+    background-color: var(--neutral-0);
 }
 
 .section {
@@ -34,16 +27,8 @@
     top: 0;
     transform: translateZ(0);
     transition: var(--transition-default);
-}
-
-.titleLight {
-    color: var(--neutral-light-800);
-    background: var(--neutral-light-0);
-}
-
-.titleDark {
-    color: var(--neutral-dark-800);
-    background: var(--neutral-dark-0);
+    color: var(--neutral-800);
+    background: var(--neutral-0);
 }
 
 @media (max-width: 1600px) {

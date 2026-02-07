@@ -4,9 +4,3 @@
     display: flex;
     flex-direction: column;
 }
-
-/* @media (max-width: 1280px) {
-    .layout {
-        min-width: 0;
-    }
-} */

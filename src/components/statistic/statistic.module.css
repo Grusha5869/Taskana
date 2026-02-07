@@ -3,12 +3,5 @@
     height: 72px;
     text-align: center;
     transition: var(--transition-default);
-}
-
-.textLight {
-    color: var(--neutral-light-800);
-}
-
-.textDark {
-    color: var(--neutral-dark-800);
+    color: var(--neutral-800);
 }

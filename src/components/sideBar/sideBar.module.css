@@ -5,20 +5,12 @@
     align-items: center;
     justify-content: center;
     transition: var(--transition-default);
+    background-color: var(--neutral-100);
+    border-left: 1px solid var(--neutral-300);
 }
 
 .rightArea path {
     transition: var(--transition-default);
-}
-
-.rightAreaLight {
-    background-color: var(--neutral-light-100);
-    border-left: 1px solid var(--neutral-light-300);
-}
-
-.rightAreaDark {
-    background-color: var(--neutral-dark-100);
-    border-left: 1px solid var(--neutral-dark-300);
 }
 
 .wrapper {

@@ -12,28 +12,13 @@
 .subtitle {
     text-align: center;
     transition: var(--transition-default);
+    color: var(--neutral-800);
 }
-
-.subtitleLight {
-    color: var(--neutral-light-800);
-}
- 
-.subtitleDark {
-    color: var(--neutral-dark-800);
-}
-
 
 .text {
     text-align: center;
     transition: var(--transition-default);
-}
-
-.textLight {
-    color: var(--neutral-light-800);
-}
-
-.textDark {
-    color: var(--neutral-dark-800);
+    color: var(--neutral-800);
 }
 
 .img {
