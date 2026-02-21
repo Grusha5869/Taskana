@@ -1,4 +1,4 @@
-export { Button, NavButton } from "./button/Button";
+export { Button, NavButton, PriorityButton, BtnCreateTask, BtnCancelTask } from "./button/Button";
 export { default as Content } from "./content/Content"
 export { default as Footer } from "./footer/Footer"
 export { default as Header } from "./header/Header"
@@ -10,3 +10,7 @@ export { default as Statistic } from "./statistic/Statistic";
 export { default as TaskList } from "./taskList/TaskList";
 export { default as TaskListDone } from "./taskListDone/TaskListDone";
 export { default as ThemeSwitcher } from "./themeSwitcher/ThemeSwitcher";
+export { default as TaskEditor } from "./taskEditor/TaskEditor";
+export { default as Icon } from "./icon/Icon";
+export { default as Illustration } from "./illustration/Illustration";
+export { default as Task } from "./task/Task"

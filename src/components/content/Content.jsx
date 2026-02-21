@@ -1,5 +1,5 @@
 import style from "./content.module.css"
-import { NavBar, SideBar } from "@/components"
+import { NavBar, SideBar, TaskEditor } from "@/components"
 
 export default function Content({ children }) {
     return (
@@ -7,6 +7,7 @@ export default function Content({ children }) {
             <NavBar />
             {children}
             <SideBar />
+            <TaskEditor />
         </div>
     )
 }

@@ -1,0 +1,211 @@
+.wrapper {
+    grid-column: 3;
+    grid-row: 1;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 400px;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition-default);
+    background-color: var(--neutral-100);
+    border-left: 1px solid var(--neutral-300);
+    display: flex;
+    flex-direction: column;
+    padding-top: 22px;
+}
+
+.wrapper.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 100;
+}
+
+.topPanel {
+    flex: 1;
+    padding: 0px 24px;
+    overflow: auto;
+}
+
+.title {
+    margin-bottom: 25px;
+    color: var(--neutral-800);
+    transition: var(--transition-default);
+}
+
+.textWrapperInput {
+    color: var(--neutral-800);
+    transition: var(--transition-default);
+}
+
+.textPriorityWrapper {
+    color: var(--neutral-800);
+    transition: var(--transition-default);
+}
+
+.wrapperInput {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 22px;
+}
+
+.input {
+    width: 100%;
+    height: 63px;
+    padding: 16px 40px 16px 16px;
+    border: 1px solid var(--neutral-400);
+    border-radius: 8px;
+    background-color: var(--neutral-0);
+    transition: var(--transition-default);
+    color: var(--neutral-600);
+    position: relative;
+}
+
+.input:hover {
+    border-color: var(--neutral-600);
+}
+
+.input:focus-visible {
+    border: 2px solid var(--neutral-0);
+}
+
+.inputContainer {
+    position: relative;
+    width: 100%;
+}
+
+.inputBtn {
+    position: absolute;
+    right: 12px;
+    top: 52%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    
+}
+
+.inputBtn path {
+    transition: var(--transition-default);
+}
+
+.inputBtn:hover path {
+    fill: var(--neutral-800);
+}
+
+
+.footer {
+    border-top: 1px solid var(--neutral-300);
+    padding: 16px 24px;
+    display: flex;
+    gap: 16px;
+    transition: var(--transition-default);
+}
+
+.btnCreateTask {
+    padding: 12px 16px;
+    width: 98px;
+    height: 48px;
+    background-color: var(--neutral-800);
+    box-shadow: var(--shadow-base-default);
+    border-radius: 8px;
+    color: var(--neutral-0);
+    border: 0;
+    cursor: pointer;
+    transition: var(--transition-default);
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+}
+
+.btnCreateTask:hover {
+    background-color: var(--neutral-700);
+    box-shadow: var(--shadow-base-hover);
+}
+
+.btnCreateTask:focus-visible {
+    background-color: var(--neutral-700);
+    box-shadow: var(--shadow-base-hover);
+    outline-color: var(--neutral-900);
+}
+
+.btnCancelTask {
+    padding: 12px 16px;
+    width: 94px;
+    height: 48px;
+    background-color: var(--neutral-200);
+    box-shadow: var(--shadow-sm-default);
+    color: var(--neutral-800);
+    border-radius: 8px;
+    border: 0;
+    cursor: pointer;
+    transition: var(--transition-default);
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+}
+
+.btnCancelTask:hover {
+    background-color: var(--neutral-300);
+    box-shadow: var(--shadow-sm-hover);
+}
+
+.btnCancelTask:focus-visible {
+    background-color: var(--neutral-300);
+    box-shadow: var(--shadow-sm-hover);
+    outline-color: var(--neutral-900);
+}
+
+.priorityWrapper {
+    display: flex;
+    gap: 17px;
+    align-items: center;
+    
+}
+
+.btnWrapper {
+    display: flex;
+    gap: 8px;
+}
+
+.btnWrapper button:nth-child(1).active0 {
+    background-color: var(--neutral-200);
+    box-shadow: var(--shadow-sm-hover);
+}
+.btnWrapper button:nth-child(1):hover {
+    background-color: var(--neutral-300);
+}
+.btnWrapper button:nth-child(1):focus-visible {
+    background-color: var(--neutral-300);
+}
+
+
+.btnWrapper button:nth-child(2).active1 {
+    background-color: var(--secondary-0);
+    box-shadow: var(--shadow-sm-hover);
+}
+.btnWrapper button:nth-child(2):hover {
+    background-color: var(--secondary-100);
+}
+.btnWrapper button:nth-child(2):focus-visible {
+    background-color: var(--secondary-100);
+}
+
+
+.btnWrapper button:nth-child(3).active2 {
+    background-color: var(--primary-variable-0);
+    box-shadow: var(--shadow-sm-hover);
+}
+.btnWrapper button:nth-child(3):hover {
+    background-color: var(--primary-variable-100);
+}
+.btnWrapper button:nth-child(3):focus-visible {
+    background-color: var(--primary-variable-100);
+}
+
+.opacity05 {
+    opacity: 0.5;
+}
+
+.simbol {
+    color: var(--primary-variable-400);
+    transition: var(--transition-default);
+}

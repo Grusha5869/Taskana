@@ -1,2 +1,2 @@
-export { ThemeContext } from "./themeContext/ThemeContext"
-export { ThemeProvider } from "./themeContext/ThemeProvider"
+export { AppContext } from "./appContext/AppContext"
+export { AppProvider } from "./appContext/AppProvider"

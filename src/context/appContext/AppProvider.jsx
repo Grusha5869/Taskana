@@ -1,8 +1,10 @@
-import { ThemeContext } from "./ThemeContext";
+import { AppContext } from "./AppContext";
 import { useEffect, useState } from "react";
 
-export const ThemeProvider = ({ children }) => {
+export const AppProvider = ({ children }) => {
     const [theme, setTheme] = useState('light');
+    const [activeTaskEditor, setActiveTaskEditor] = useState(false);
+    const [taskArr, setTaskArr] = useState([]);
     
     const toggleTheme = () => {
         setTheme(prev => prev === 'light' ? 'dark' : 'light');
@@ -17,8 +19,8 @@ export const ThemeProvider = ({ children }) => {
     }, [theme])
 
     return (
-        <ThemeContext.Provider value={{ theme, toggleTheme }}>
+        <AppContext.Provider value={{ theme, toggleTheme, activeTaskEditor, setActiveTaskEditor, taskArr, setTaskArr }}>
             {children}
-        </ThemeContext.Provider>
+        </AppContext.Provider>
     );
 }

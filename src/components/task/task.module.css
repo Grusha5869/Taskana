@@ -1,0 +1,77 @@
+.listElem {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 40px;
+    padding: 8px 8px 8px 16px;
+    border-radius: 8px;
+    transition: var(--transition-default);
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+}
+
+.listElem:hover {
+    box-shadow: var(--shadow-base-default);
+    background-color: var(--neutral-100);
+}
+
+.listElem:focus-visible {
+    box-shadow: var(--shadow-base-default);
+    background-color: var(--neutral-100);
+    outline-color: var(--neutral-900);  
+}
+
+.checkbox {
+    appearance: none;
+    outline: none;
+    width: 20px;
+    height: 20px;
+    border: 1.5px solid transparent;
+    border-radius: 4px;
+    flex-shrink: 0;
+    transition: var(--transition-default);
+}
+
+.checkboxP0 {
+    border-color: var(--neutral-400);
+    outline: 4px solid transparent;
+    outline-offset: 0;
+}
+.checkboxP0:hover {
+    border-color: var(--neutral-800);
+}
+.checkboxP0:focus-visible {
+    border-color: var(--neutral-800);
+    outline-color: var(--neutral-400);
+}
+
+.checkboxP1 {
+    border-color: var(--secondary-300);
+    outline: 4px solid transparent;
+    outline-offset: 0;
+}
+.checkboxP1:hover {
+    border-color: var(--secondary-500);
+}
+.checkboxP1:focus-visible {
+    border-color: var(--secondary-500);
+    outline-color: var(--secondary-100);
+}
+
+.checkboxP2 {
+    border-color: var(--primary-variable-300);
+    outline: 4px solid transparent;
+    outline-offset: 0;
+}
+.checkboxP2:hover {
+    border-color: var(--primary-variable-500);
+}
+.checkboxP2:focus-visible {
+    border-color: var(--primary-variable-500);
+    outline-color: var(--primary-variable-100);
+}
+
+.text {
+    transition: var(--transition-default);
+    color: var(--neutral-800);
+}

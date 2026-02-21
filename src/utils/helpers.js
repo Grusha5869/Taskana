@@ -1,14 +1,13 @@
-export function editPadding(elem, side, value) {
-    if (!elem) return
-    
-    if (side === 'left') {
-        elem.style.paddingLeft = value + 'px';
-    } else if (side === 'right') {
-        elem.style.paddingRight = value + 'px';
-    }
-
-}
-
 export function classNameString(...elemArr) {
     return elemArr.join(" ");
 } 
+
+export function randomId(length = 8) {
+    const character = "QWERTYUIOPLKJHGFDSAZXCVBNMqwertyuioplkjhgfdsamnbvcxz";
+    let result = "";
+    for (let i = 0; i < length; i++) {
+        result += character[Math.floor(Math.random() * character.length)]
+    }
+    
+    return result
+}

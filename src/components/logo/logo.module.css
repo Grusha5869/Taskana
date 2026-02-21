@@ -6,11 +6,6 @@
     outline-offset: 4px;
 }
 
-.logo {
-    width: 126px;
-    height: 40px;
-}
-
 .link:focus-visible {
     outline-color: var(--base-white);
 }

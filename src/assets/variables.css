@@ -34,6 +34,36 @@
         var(--primary-500)
     );
 
+    --primary-light-0: rgba(255, 244, 244, 1);
+    --primary-light-100: rgba(255, 206, 206, 1);
+    --primary-light-200: rgba(252, 169, 169, 1);
+    --primary-light-300: rgba(242, 89, 89, 1);
+    --primary-light-400: rgba(213, 16, 16, 1);
+    --primary-light-500: rgba(166, 12, 12, 1);
+    --primary-light-600: rgba(118, 9, 9, 1);
+
+    --primary-dark-0: rgba(48, 11, 11, 1);
+    --primary-dark-100: rgba(70, 19, 19, 1);
+    --primary-dark-200: rgba(118, 9, 9, 1);
+    --primary-dark-300: rgba(166, 12, 12, 1);
+    --primary-dark-400: rgba(213, 16, 16, 1);
+    --primary-dark-500: rgba(242, 89, 89, 1);
+
+    --secondary-light-0: rgba(245, 240, 255, 1);
+    --secondary-light-100: rgba(234, 223, 255, 1);
+    --secondary-light-200: rgba(217, 197, 255, 1);
+    --secondary-light-300: rgba(183, 146, 255, 1);
+    --secondary-light-400: rgba(116, 44, 255, 1);
+    --secondary-light-500: rgba(88, 27, 204, 1);
+
+    --secondary-dark-0: rgba(38, 28, 60, 1);
+    --secondary-dark-100: rgba(61, 42, 102, 1);
+    --secondary-dark-200: rgba(93, 56, 174, 1);
+    --secondary-dark-300: rgba(125, 69, 234, 1);
+    --secondary-dark-400: rgba(157, 106, 255, 1);
+    --secondary-dark-500: rgba(183, 146, 255, 1);
+    
+
     --base-white: rgba(255, 255, 255, 1);
     --base-600: rgba(108, 108, 108, 1);
     --base-800: rgba(38, 38, 38, 1);
@@ -66,6 +96,21 @@
     --neutral-800: var(--neutral-light-800);
     --neutral-900: var(--neutral-light-900);
 
+    --primary-variable-0: var(--primary-light-0);
+    --primary-variable-100: var(--primary-light-100);
+    --primary-variable-200: var(--primary-light-200);
+    --primary-variable-300: var(--primary-light-300);
+    --primary-variable-400: var(--primary-light-400);
+    --primary-variable-500: var(--primary-light-500);
+    --primary-variable-600: var(--primary-light-600);
+
+    --secondary-0: var(--secondary-light-0);
+    --secondary-100: var(--secondary-light-100);
+    --secondary-200: var(--secondary-light-200);
+    --secondary-300: var(--secondary-light-300);
+    --secondary-400: var(--secondary-light-400);
+    --secondary-500: var(--secondary-light-500);
+
     --shadow-base-default: var(--light-base-default);
     --shadow-base-hover: var(--light-base-hover);
     --shadow-sm-default: var(--light-sm-default);
@@ -83,6 +128,21 @@
     --neutral-700: var(--neutral-dark-700);
     --neutral-800: var(--neutral-dark-800);
     --neutral-900: var(--neutral-dark-900);
+
+    --primary-variable-0: var(--primary-dark-0);
+    --primary-variable-100: var(--primary-dark-100);
+    --primary-variable-200: var(--primary-dark-200);
+    --primary-variable-300: var(--primary-dark-300);
+    --primary-variable-400: var(--primary-dark-400);
+    --primary-variable-500: var(--primary-dark-500);
+    --primary-variable-600: var(--primary-dark-600);
+
+    --secondary-0: var(--secondary-dark-0);
+    --secondary-100: var(--secondary-dark-100);
+    --secondary-200: var(--secondary-dark-200);
+    --secondary-300: var(--secondary-dark-300);
+    --secondary-400: var(--secondary-dark-400);
+    --secondary-500: var(--secondary-dark-500);
 
     --shadow-base-default: var(--dark-base-default);
     --shadow-base-hover: var(--dark-base-hover);
