@@ -1,4 +1,4 @@
-export { Button, NavButton, PriorityButton, BtnCreateTask, BtnCancelTask } from "./button/Button";
+export { Button, PriorityButton, BtnCreateTask, BtnCancelTask } from "./button/Button";
 export { default as Content } from "./content/Content"
 export { default as Footer } from "./footer/Footer"
 export { default as Header } from "./header/Header"

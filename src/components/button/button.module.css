@@ -32,36 +32,6 @@
     color: var(--base-white);
 }
 
-.navBtn {
-    width: 172px;
-    height: 40px;
-    border: none;
-    border-radius: 8px;
-    padding: 0;
-    transition: var(--transition-default);
-    outline: 2px solid transparent;
-    outline-offset: 2px;
-    background: var(--neutral-800);
-    box-shadow: var(--shadow-base-default);
-    display: flex;
-    gap: 12px;
-    align-items: center;
-    cursor: pointer;
-    padding: 1px 13px;
-    transition: var(--transition-default);
-}
-
-.navBtn:hover {
-    background: var(--neutral-700);
-    box-shadow: var(--shadow-base-hover);
-}
-
-.navBtn:focus-visible {
-    outline-color: var(--neutral-900);
-    background: var(--neutral-700);
-    box-shadow: var(--shadow-base-hover);
-}
-
 .clickBtn {
     background: var(--primary-300);
 }

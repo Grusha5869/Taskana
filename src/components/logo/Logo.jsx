@@ -1,5 +1,5 @@
 import style from './logo.module.css'
-import Illustration from '../illustration/Illustration'
+import { Illustration } from '@/components'
 
 export default function Logo({ onFocus, onBlur }) {
     return (

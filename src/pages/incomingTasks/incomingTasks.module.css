@@ -21,7 +21,8 @@
 }
 
 .title {
-    padding: 24px;
+    /* padding: 24px; */
+    padding: 24px 24px 17px 24px;
     position: sticky;
     z-index: 200;
     top: 0;

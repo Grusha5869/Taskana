@@ -1,9 +1,9 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import style from "./taskEditor.module.css"
-import { useContext, useEffect, useMemo, useRef, useState } from "react"
-import { classNameString, randomId } from "../../utils/helpers"
+import { useContext, useEffect, useRef, useState } from "react"
+import { classNameString, randomId } from '@/utils'
 import { AppContext } from "@/context"
-import { Icon } from "@/components"
-import { PriorityButton, BtnCreateTask, BtnCancelTask } from "@/components"
+import { PriorityButton, BtnCreateTask, BtnCancelTask, Icon } from "@/components"
 
 const IconName = ['ordinaryP', 'elevatedP', 'maximumP'];
 const iconNameLength = IconName.length;
@@ -12,7 +12,7 @@ export default function TaskEditor() {
     const { activeTaskEditor, setActiveTaskEditor, taskArr, setTaskArr } = useContext(AppContext);
     const inputRef = useRef(null);
     const [inputValue, setInputValue] = useState('');
-    const [priority, setPriority] = useState(0);
+    const [priority, setPriority] = useState(1);
     const [classActive, setClassActive] = useState('');
 
     useEffect(() => {
@@ -22,18 +22,22 @@ export default function TaskEditor() {
                     inputRef.current.focus();
                 }
             }, 100); 
+        } else {
+            inputRef.current.value = '';
+            setInputValue('')
+            setPriority(1)
         }
     }, [activeTaskEditor])
 
-    const priorityActive = useMemo(() => {
+    useEffect(() => {
         switch (priority) {
-            case 0:
+            case 1:
                 setClassActive(style.active0)
                 break
-            case 1:
+            case 2:
                 setClassActive(style.active1)
                 break
-            case 2:
+            case 3:
                 setClassActive(style.active2)
                 break
         }
@@ -41,7 +45,7 @@ export default function TaskEditor() {
     
     useEffect(() => {
         if (taskArr.length > 0) {
-            setPriority(0)
+            setPriority(1)
         }
     }, [taskArr])
 
@@ -56,6 +60,8 @@ export default function TaskEditor() {
                 updatedAt: new Date().toISOString(),
             }
         ])
+        setActiveTaskEditor(false);
+        
     }
 
     function handleClick() {
@@ -66,35 +72,39 @@ export default function TaskEditor() {
     function priorityHandle(elemName) {
         for (let i = 0; i < iconNameLength; i++) {
             if (IconName[i] === elemName) {
-                setPriority(i);
+                setPriority(i + 1);
             }
         }
     }
 
     return (
         <div className={classNameString(style.wrapper, activeTaskEditor && style.active)}>
-            <div className={style.topPanel}>
-                <h2 className={classNameString("heading-h1", style.title)}>Создание задачи</h2>
-                <div className={style.wrapperInput}>
-                    <p 
-                        className={classNameString('body-lg-bold', style.textWrapperInput)}
-                    >Название <span className={style.simbol}>*</span>
-                    </p>
-                    <div className={style.inputContainer}>
-                        <input 
-                            ref={inputRef}
-                            className={classNameString('body-lg-regular', style.input)} 
-                            placeholder="Название задачи" 
-                            onChange={elem => setInputValue(elem.target.value)}
-                            type="text"
-                        />
-                        {inputValue.length > 0 && (
-                            <button onClick={handleClick} className={style.inputBtn}>
-                                <Icon name={'cross'} />
-                            </button>
-                        )}
+            <div className={style.wrapperWrapper}>
+                <div className={style.topPanel}>
+                <div className={style.wrapperSticky}>
+                    <h2 className={classNameString("heading-h1", style.title)}>Создание задачи</h2>
+                    <div className={style.wrapperInput}>
+                        <p 
+                            className={classNameString('body-lg-bold', style.textWrapperInput)}
+                        >Название <span className={style.simbol}>*</span>
+                        </p>
+                        <div className={style.inputContainer}>
+                            <input 
+                                ref={inputRef}
+                                className={classNameString('body-lg-regular', style.input)} 
+                                placeholder="Название задачи" 
+                                onChange={elem => setInputValue(elem.target.value)}
+                                type="text"
+                            />
+                            {inputValue.length > 0 && (
+                                <button onClick={handleClick} className={style.inputBtn}>
+                                    <Icon name={'cross'} />
+                                </button>
+                            )}
+                        </div>
                     </div>
                 </div>
+
                 <div className={style.priorityWrapper}>
                     <p className={classNameString('body-lg-bold', style.textPriorityWrapper)}>Приоритет</p>
                     <div className={style.btnWrapper}>
@@ -122,6 +132,7 @@ export default function TaskEditor() {
                     onClick={() => setActiveTaskEditor(false)}
                     text={'Отмена'}
                 />
+            </div>
             </div>
         </div>
     )

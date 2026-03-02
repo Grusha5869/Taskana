@@ -1,5 +1,5 @@
 import style from "./footer.module.css"
-import { classNameString } from '../../utils/helpers'
+import { classNameString } from '@/utils'
 
 export default function Footer() {
     return (

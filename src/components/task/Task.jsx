@@ -1,22 +1,22 @@
 import style from "./task.module.css"
-import { classNameString } from '../../utils/helpers'
+import { classNameString } from '@/utils'
 
 const styleDefCheckbox = style.checkbox;
-const stylePriority0 = style.checkboxP0;
-const stylePriority1 = style.checkboxP1;
-const stylePriority2 = style.checkboxP2;
+const stylePriority1 = style.checkboxP0;
+const stylePriority2 = style.checkboxP1;
+const stylePriority3 = style.checkboxP2;
 const text = style.text;
 
 export default function Task({ elem }) {
     
     function checkStyleInput(value) {
         switch (value) {
-            case 0:
-                return stylePriority0
             case 1:
                 return stylePriority1
             case 2:
                 return stylePriority2
+            case 3:
+                return stylePriority3
             default:
                 break;
         }  

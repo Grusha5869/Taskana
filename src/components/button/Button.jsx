@@ -1,8 +1,9 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import style from './button.module.css';
-import { classNameString } from "../../utils/helpers";
+import { classNameString } from '@/utils';
 import { useContext, useEffect, useRef, useState } from 'react';
-import Icon from '../icon/Icon';
-import { AppContext } from '../../context/appContext/AppContext';
+import { Icon } from '@/components';
+import { AppContext } from '@/context';
 
 export const Button = ({ text, tabIndex }) => {
     const { activeTaskEditor, setActiveTaskEditor } = useContext(AppContext)
@@ -72,6 +73,7 @@ export const Button = ({ text, tabIndex }) => {
             type='button' 
             className={classNameString('body-md-semibold', style.button, mouseEnter && style.buttonHover,  clickCheck && style.clickBtn)}
             tabIndex={tabIndex}
+            disabled={btnFinish}
         >
             
             {clickLoad ? <Icon name='load' /> : (
@@ -83,18 +85,6 @@ export const Button = ({ text, tabIndex }) => {
         </button>
     )
 }
-
-export const NavButton = ({ children, tabIndex }) => {
-    return (
-        <button 
-            tabIndex={tabIndex}
-            className={style.navBtn}
-            type='button'
-        >
-            {children}
-        </button>
-    )
-};
 
 export const PriorityButton = ({ children, classList, onClick }) => {
     return (

@@ -1,5 +1,8 @@
 export function classNameString(...elemArr) {
-    return elemArr.join(" ");
+    const filterArr = elemArr.filter(elem => {
+        if (elem) return true
+    })
+    return filterArr.join(" ");
 } 
 
 export function randomId(length = 8) {

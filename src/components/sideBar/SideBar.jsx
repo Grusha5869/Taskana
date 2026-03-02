@@ -1,7 +1,6 @@
 import style from './sideBar.module.css'
-import { Statistic } from '@/components'
-import Illustration from '../illustration/Illustration'
-import { classNameString } from "../../utils/helpers"
+import { Statistic, Illustration } from '@/components'
+import { classNameString } from "@/utils"
 
 export default function SideBar() {
     return (

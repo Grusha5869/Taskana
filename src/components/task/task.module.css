@@ -2,12 +2,14 @@
     display: flex;
     align-items: center;
     gap: 18px;
-    margin-bottom: 40px;
-    padding: 8px 8px 8px 16px;
+    margin-bottom: 24px;
+    padding: 8px 8px 8px 22px;
+    /* padding: 20px 22px; */
     border-radius: 8px;
     transition: var(--transition-default);
     outline: 2px solid transparent;
     outline-offset: 2px;
+    word-break: break-word;
 }
 
 .listElem:hover {
@@ -22,6 +24,7 @@
 }
 
 .checkbox {
+    align-self: flex-start;
     appearance: none;
     outline: none;
     width: 20px;

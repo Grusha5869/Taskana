@@ -1,5 +1,5 @@
 import style from "./statistic.module.css"
-import { classNameString } from '../../utils/helpers'
+import { classNameString } from '@/utils'
 
 export default function Statistic() {
     return (

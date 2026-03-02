@@ -1,7 +1,7 @@
 import style from "./themeSwitcher.module.css"
-import { classNameString } from "../../utils/helpers"
+import { classNameString } from "@/utils"
 import { useState, useContext } from "react"
-import Icon from "../icon/Icon"
+import { Icon } from "@/components"
 import { AppContext } from '@/context';
 
 export default function ThemeSwitcher() {

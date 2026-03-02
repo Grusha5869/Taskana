@@ -1,6 +1,6 @@
 import style from "./taskListDone.module.css"
-import Illustration from "../illustration/Illustration"
-import { classNameString } from '../../utils/helpers'
+import { Illustration } from "@/components"
+import { classNameString } from '@/utils'
 
 export default function TaskListDone() {
     return (
