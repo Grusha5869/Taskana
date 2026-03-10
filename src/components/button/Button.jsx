@@ -110,3 +110,12 @@ export const BtnCancelTask = ({ classList, onClick, text }) => {
         >{text}</button>
     )
 }
+
+export const BtnDrop = ({ iconName, text }) => {
+    return (
+        <button className={style.dropBtn}>
+            <Icon name={iconName} />
+            <p>{text}</p>
+        </button>
+    )
+}

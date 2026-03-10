@@ -1,4 +1,4 @@
-export { Button, PriorityButton, BtnCreateTask, BtnCancelTask } from "./button/Button";
+export { Button, PriorityButton, BtnCreateTask, BtnCancelTask, BtnDrop } from "./button/Button";
 export { default as Content } from "./content/Content"
 export { default as Footer } from "./footer/Footer"
 export { default as Header } from "./header/Header"
@@ -13,4 +13,5 @@ export { default as ThemeSwitcher } from "./themeSwitcher/ThemeSwitcher";
 export { default as TaskEditor } from "./taskEditor/TaskEditor";
 export { default as Icon } from "./icon/Icon";
 export { default as Illustration } from "./illustration/Illustration";
-export { default as Task } from "./task/Task"
+export { default as Task } from "./task/Task";
+export { default as Dropdown } from "./dropdown/Dropdown";

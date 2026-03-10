@@ -20,16 +20,22 @@
     z-index: 190;
 }
 
-.title {
-    /* padding: 24px; */
-    padding: 24px 24px 17px 24px;
+.titleWrapper {
     position: sticky;
     z-index: 200;
+    padding-right: 20px;
     top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     transform: translateZ(0);
     transition: var(--transition-default);
-    color: var(--neutral-800);
     background: var(--neutral-0);
+}
+
+.title {
+    padding: 24px 24px 17px 24px;
+    color: var(--neutral-800); 
 }
 
 @media (max-width: 1600px) {

@@ -58,3 +58,16 @@
     box-shadow: var(--shadow-sm-hover);
     outline-color: var(--neutral-900);
 }
+
+.dropBtn {
+    padding: 8px 8px 8px 12px;
+    width: 210px;
+    height: 40px;
+    background: var(--neutral-200);
+    box-shadow: var(--shadow-sm-default);
+    border-radius: 8px;
+    transition: var(--transition-default);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
