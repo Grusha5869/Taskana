@@ -27,6 +27,11 @@
     z-index: 100;
 }
 
+.wrapper.close {
+    opacity: 0;
+    visibility: hidden;
+}
+
 .topPanel {
     flex: 1;
     padding: 22px 24px 0 24px;
@@ -124,8 +129,6 @@
 
 .btnCreateTask {
     padding: 12px 16px;
-    /* width: 98px;
-    height: 48px; */
     background-color: var(--neutral-800);
     box-shadow: var(--shadow-base-default);
     border-radius: 8px;

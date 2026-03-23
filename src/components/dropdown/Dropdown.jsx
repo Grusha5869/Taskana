@@ -1,58 +1,86 @@
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState, useContext } from "react"
 import style from "./dropdown.module.css"
 import { Icon, BtnDrop } from "@/components"
-import { classNameString, randomId } from "@/utils"
-
-const ArrList = [
-    {
-        sort: "priorityDownSort", 
-        sortTitle: "Приоритету"
-    }, {
-        sort: "priorityUpSort", 
-        sortTitle: "Приоритету"
-    }, {
-        sort: "alpabetDownSort", 
-        sortTitle: "Алфавиту"
-    }, {
-        sort: "alpabetUpSort", 
-        sortTitle: "Алфавиту"
-    }, {
-        sort: "dateCreateDownSort", 
-        sortTitle: "Дате создания"
-    }, {
-        sort: "dateCreateUpSort", 
-        sortTitle: "Дате создания"
-    }, {
-        sort: "updateDownSort", 
-        sortTitle: "Дате обновления"
-    }, {
-        sort: "updateUpSort", 
-        sortTitle: "Дате обновления"
-    }
-];
+import { AppContext } from '@/context'
+import { classNameString, randomId, ArrListDrop, sortingPriority, sortingDateCreate, sortingDateUpdate, sortingAlpabet } from "@/utils"
 
 export default function Dropdown() {
-    const [click, setClick] = useState(0);
+    const [listClose, setListClose] = useState(true);
+    const [storeSorting, setStoreSorting] = useState(ArrListDrop[4]);
+    const [activeElemId, setActiveElemId] = useState(ArrListDrop[4].sort);
+    const wrapperRef = useRef(null);
+    const { taskArr, setTaskArr, updateTaskSort } = useContext(AppContext);
+
     useEffect(() => {
-        console.log(click);
-        
-    }, [click])
+        if (!storeSorting.sort) return
+
+        if (storeSorting.sort === "priorityDownSort") {
+            setTaskArr(prev => sortingPriority(prev))
+        } else if (storeSorting.sort === "priorityUpSort") {
+            setTaskArr(prev => sortingPriority(prev, true))
+        } else if (storeSorting.sort === "alpabetDownSort") {
+            setTaskArr(prev => sortingAlpabet(prev))
+        } else if (storeSorting.sort === "alpabetUpSort") {
+            setTaskArr(prev => sortingAlpabet(prev, true))
+        } else if (storeSorting.sort === "dateCreateDownSort") {
+            setTaskArr(prev => sortingDateCreate(prev))
+        } else if (storeSorting.sort === "dateCreateUpSort") {
+            setTaskArr(prev => sortingDateCreate(prev, true))
+        } else if (storeSorting.sort === "updateDownSort") {
+            setTaskArr(prev => sortingDateUpdate(prev))
+        } else if (storeSorting.sort === "updateUpSort") {
+            setTaskArr(prev => sortingDateUpdate(prev, true))
+        }
+    }, [storeSorting, updateTaskSort])
+
+    function handleClickList(elem) {
+        setStoreSorting(elem)
+        setListClose(true)
+        setActiveElemId(elem.sort)
+    }
+
+    useEffect(() => {
+        const handleListClose = (event) => {
+            if (wrapperRef.current && wrapperRef.current.contains(event.target)) {
+                return
+            }
+
+            setListClose(true)
+        }
+
+        if (!listClose) {
+            setTimeout(() => {
+                return window.addEventListener('click', handleListClose)
+            }, 0)
+        }
+
+        return () => window.removeEventListener('click', handleListClose)
+    }, [listClose])
+
     return (
-        <div onClick={() => setClick(prev => prev + 1)} className={style.mainWrapper}>
+        <div className={style.mainWrapper} ref={wrapperRef}>
             <BtnDrop
-                iconName={"priorityDownSort"}
-                text={'Приоритету'}
+                content={storeSorting}
+                onClick={() => setListClose(prev => prev ? false : true)}
             />
-            <div className={style.wrapperList}>
+            <div className={classNameString(style.wrapperList, listClose && style.hiddenList)}>
                 <div className={style.wrapperTitle}>
                     <Icon name="sortDrop" />
-                    <p className={classNameString("body-md-bold")}>Сортировка по:</p>
+                    <p className={classNameString("body-md-bold", style.text)}>Сортировка по:</p>
                 </div>
                 <ul className={style.list}>
-                    {ArrList.map(elem => 
-                        <li key={elem.sort + randomId()} className={style.listElem}>
+                    {ArrListDrop.map(elem => 
+                        <li 
+                            tabIndex={0} 
+                            key={elem.sort + randomId()}    className={style.listElem}
+                            onClick={() => handleClickList(elem)}
+                        >
                             <Icon name={elem.sort} />
-                            <p className={classNameString("body-md-regular")}>{elem.sortTitle}</p>
+                            <p className={classNameString("body-md-regular", style.text)}>{elem.sortTitle}</p>
+
+                            {elem.sort === activeElemId && (
+                                <Icon className={style.jackdawSort} name="jackdawSort" />
+                            )}
                         </li>
                     )}
                 </ul>

@@ -111,11 +111,25 @@ export const BtnCancelTask = ({ classList, onClick, text }) => {
     )
 }
 
-export const BtnDrop = ({ iconName, text }) => {
+export const BtnDrop = ({ content, onClick }) => {
     return (
-        <button className={style.dropBtn}>
-            <Icon name={iconName} />
-            <p>{text}</p>
+        <button onClick={onClick} className={style.dropBtn}>
+            <Icon name={content.sort} />
+            <p className={classNameString('body-md-semibold', style.dropText)}>{"По " + content.sortTitle.charAt(0).toLowerCase() + content.sortTitle.slice(1)}</p>
+            <Icon className={style.openingSort} name="openingSort" />
+        </button>
+    )
+}
+
+export const BtnEdit = ({ onClick, active, setActive, activeEditWrapper, setActiveEditWrapper }) => {
+    return (
+        <button 
+            onClick={onClick}
+            onFocus={() => setActive(true)} 
+            onBlur={() => setActive(false)} 
+            className={style.editBtn}
+        >
+            <Icon name="editTask" className={classNameString(style.editTaskIcon, active && style.editTaskIconActive)} />
         </button>
     )
 }

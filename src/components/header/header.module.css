@@ -5,7 +5,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 24px 0px 16px;
+    padding: 0px 24px 0px 14px;
     z-index: 200;
     transition: var(--transition-default);
     box-shadow: var(--light-base-default)

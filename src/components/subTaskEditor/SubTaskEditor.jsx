@@ -1,34 +1,19 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-import style from "./taskEditor.module.css"
+import style from "./subTaskEditor.module.css";
 import { useContext, useEffect, useRef, useState } from "react"
 import { classNameString, randomId } from '@/utils'
 import { AppContext } from "@/context"
-import { PriorityButton, BtnCreateTask, BtnCancelTask, Icon, SubTaskEditor } from "@/components"
+import { PriorityButton, BtnCreateTask, BtnCancelTask, Icon } from "@/components"
 
 const IconName = ['ordinaryP', 'elevatedP', 'maximumP'];
 const iconNameLength = IconName.length;
 
-export default function TaskEditor() {
-    const { activeTaskEditor, setActiveTaskEditor, taskArr, setTaskArr, setUpdateTaskSort, activeEditWrapper } = useContext(AppContext);
+export default function SubTaskEditor({visible, setVisible}) {
+    const { activeTaskEditor, setActiveTaskEditor, taskArr, setTaskArr, setUpdateTaskSort, activeEditWrapper, setActiveEditWrapper, taskSelect } = useContext(AppContext);
     const inputRef = useRef(null);
     const [inputValue, setInputValue] = useState('');
-    const [priority, setPriority] = useState(1);
+    const [priority, setPriority] = useState(taskSelect.priority);
     const [classActive, setClassActive] = useState('');
     const [visibleEdit, setVisibleEdit] = useState(false);
-
-    useEffect(() => {
-        if (activeTaskEditor) {
-            setTimeout(() => {
-                if (inputRef.current) {
-                    inputRef.current.focus();
-                }
-            }, 100); 
-        } else {
-            inputRef.current.value = '';
-            setInputValue('')
-            setPriority(1)
-        }
-    }, [activeTaskEditor])
 
     useEffect(() => {
 
@@ -47,37 +32,39 @@ export default function TaskEditor() {
         
         
     }, [priority])
-    
+
     useEffect(() => {
-        if (!taskArr) return
-        if (taskArr.length > 0) {
-            setPriority(1)
-        } 
-    }, [taskArr])
-
-    function createTask() {
-        if (inputValue.trim() === '') return
-        setTaskArr(prevElem => [...prevElem, 
-            {
-                id: randomId(), 
-                title: inputValue, 
-                priority: priority, 
-                createdAt: new Date().toISOString(), 
-                updatedAt: new Date().toISOString(),
-            }
-        ])
-        setActiveTaskEditor(false);
-        setUpdateTaskSort(prev => prev + 1)
-    }
-
-    function handleClick() {
-        inputRef.current.value = "";
-        setInputValue("");
-    }
+        if (taskSelect) {
+            inputRef.current.value = taskSelect.title;
+            setInputValue(taskSelect.title)
+        }
+    }, [taskSelect])
 
     function handleClickBtnCancel() {
-        setActiveTaskEditor(false)
-        setInputValue("")
+        setVisibleEdit(false)
+
+        setTimeout(() => {
+            setActiveTaskEditor(false)
+            setActiveEditWrapper(false)
+        }, 400);
+    }   
+
+    function editTask() {
+        setTaskArr(prev => prev.map(elem => {
+            if (elem.id === taskSelect.id) {
+                elem.title = inputValue
+                elem.priority = priority
+                elem.updatedAt = new Date().toISOString()
+                
+            }
+            return elem
+            
+        }))
+        setVisibleEdit(false)
+        setTimeout(() => {
+            setActiveTaskEditor(false)
+            setActiveEditWrapper(false)
+        }, 400);
     }
 
     function priorityHandle(elemName) {
@@ -91,25 +78,28 @@ export default function TaskEditor() {
     function handleKeyDownEnter(event) {
         if (event.key === "Enter") {
             if (inputValue.trim() === "") return
-            createTask()
+            editTask()
         }
     }
 
-    if (activeEditWrapper) {
-        return (
-            <SubTaskEditor
-                visible={visibleEdit}
-                setVisible={setVisibleEdit}
-            />
-        )
+    function handleClick() {
+        inputRef.current.value = "";
+        setInputValue("");
     }
 
+    useEffect(() => {
+        if (activeEditWrapper) {
+            setVisibleEdit(true)
+        }
+
+    }, [activeEditWrapper])
+
     return (
-        <div className={classNameString(style.wrapper, activeTaskEditor && style.active)}>
+        <div className={classNameString(style.wrapper, visibleEdit && style.active)}>
             <div className={style.wrapperWrapper}>
                 <div className={style.topPanel}>
                 <div className={style.wrapperSticky}>
-                    <h2 className={classNameString("heading-h1", style.title)}>{"Создание задачи"}</h2>
+                    <h2 className={classNameString("heading-h1", style.title)}>Редактирование</h2>
                     <div className={style.wrapperInput}>
                         <p 
                             className={classNameString('body-lg-bold', style.textWrapperInput)}
@@ -152,8 +142,8 @@ export default function TaskEditor() {
                 <BtnCreateTask 
                     disabled={inputValue.trim() === '' ? true : false} 
                     classList={classNameString(style.btnCreateTask, inputValue.trim() === '' && style.opacity05)}
-                    onClick={createTask}
-                    text={'Создать'}
+                    onClick={editTask}
+                    text={'Сохранить'}
                 />
                 <BtnCancelTask
                     classList={style.btnCancelTask}

@@ -1,27 +1,47 @@
 .mainWrapper {
     visibility: visible;
     position: relative;
+    transition: var(--transition-default);
 }
 .wrapperList {
     visibility: visible;
     position: absolute;
-    top: 0;
     width: 100%;
     background-color: var(--neutral-0);
     border-radius: 8px;
-    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
-    padding: 4px;
+    box-shadow: var(--shadow-lg);
+    transition: var(--transition-default);
+    margin-top: 10px;
 }
+
 .wrapperTitle {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
+    transition: var(--transition-default);
+    padding: 13px 16px 0 11px;
+}
+
+.wrapperTitle path {
+    transition: var(--transition-default);
 }
 
 .list {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 4px;
+    transition: var(--transition-default);
+    margin-top: 12px;
+    margin-bottom: 0;
+}
+
+.list svg {
+    width: 21px;
+}
+
+.hiddenList {
+    opacity: 0;
+    visibility: hidden;
 }
 
 .listElem {
@@ -31,9 +51,24 @@
     align-items: center;
     padding: 8px;
     border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transition-default);
+}
+
+.listElem path {
     transition: var(--transition-default);
 }
 
 .listElem:hover {
     background-color: var(--neutral-200);
+}
+
+.text {
+    transition: var(--transition-default);
+    color: var(--neutral-800);
+}
+
+.jackdawSort {
+    position: absolute;
+    right: 18px;
 }

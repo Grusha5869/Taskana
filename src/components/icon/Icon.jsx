@@ -16,6 +16,9 @@ import DateCreateDownSort from "./icons/DateCreateDownSort"
 import DateCreateUpSort from "./icons/DateCreateUpSort"
 import UpdateDownSort from "./icons/UpdateDownSort"
 import UpdateUpSort from "./icons/UpdateUpSort"
+import JackdawSort from "./icons/JackdawSort"
+import OpeningSort from "./icons/OpeningSort"
+import EditTask from "./icons/EditTask"
 
 const iconsAll = {
     inbox: Inbox,
@@ -36,9 +39,12 @@ const iconsAll = {
     dateCreateUpSort: DateCreateUpSort,
     updateDownSort: UpdateDownSort,
     updateUpSort: UpdateUpSort,
+    jackdawSort: JackdawSort,
+    openingSort: OpeningSort,
+    editTask: EditTask,
 }
 
-export default function Icon({name, fill}) {
+export default function Icon({name, className, fill}) {
     const Icon = iconsAll[name];
     if (!Icon) {
         console.warn(`Не получилось найти иконку - ${name}`)
@@ -47,6 +53,7 @@ export default function Icon({name, fill}) {
 
     return (
         <Icon
+            className={className}
             fill={fill}
         />
     )

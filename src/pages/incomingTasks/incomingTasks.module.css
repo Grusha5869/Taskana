@@ -36,6 +36,7 @@
 .title {
     padding: 24px 24px 17px 24px;
     color: var(--neutral-800); 
+    transition: var(--transition-default);
 }
 
 @media (max-width: 1600px) {

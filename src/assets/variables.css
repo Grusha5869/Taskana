@@ -79,9 +79,13 @@
     --dark-base-hover: 2px 8px 12px rgba(0, 0, 0, 0.8);
     --dark-sm-default: 2px 2px 4px rgba(0, 0, 0, 0.3);
     --dark-sm-hover: 2px 8px 12px rgba(0, 0, 0, 0.6);
+    --light-lg: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+    --dark-lg:  0px 0px 16px 8px rgba(0, 0, 0, 0.4);
 
-    --transition-default: 0.2s
+    --transition-default: 0.2s;
     
+
+
 }
 
 [data-theme="light"] {
@@ -115,6 +119,7 @@
     --shadow-base-hover: var(--light-base-hover);
     --shadow-sm-default: var(--light-sm-default);
     --shadow-sm-hover: var(--light-sm-hover);
+    --shadow-lg: var(--light-lg)
 }
 
 [data-theme="dark"] {
@@ -148,4 +153,5 @@
     --shadow-base-hover: var(--dark-base-hover);
     --shadow-sm-default: var(--dark-sm-default);
     --shadow-sm-hover: var(--dark-sm-hover);
+    --shadow-lg: var(--dark-lg)
 }

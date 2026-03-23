@@ -5,6 +5,9 @@ export const AppProvider = ({ children }) => {
     const [theme, setTheme] = useState('light');
     const [activeTaskEditor, setActiveTaskEditor] = useState(false);
     const [taskArr, setTaskArr] = useState([]);
+    const [updateTaskSort, setUpdateTaskSort] = useState(0);
+    const [activeEditWrapper, setActiveEditWrapper] = useState(false);
+    const [taskSelect, setTaskSelect] = useState(null);
     const toggleTheme = () => {
         setTheme(prev => prev === 'light' ? 'dark' : 'light');
     };
@@ -18,12 +21,13 @@ export const AppProvider = ({ children }) => {
     }, [theme])
 
     const taskArrReverse = useMemo(() => {
+        if (!Array.isArray(taskArr)) return
         return taskArr.length > 0 ? taskArr.slice().reverse() : [];
     }, [taskArr]);
 
     return (
         <AppContext.Provider value={
-            { theme, toggleTheme, activeTaskEditor, setActiveTaskEditor, taskArr, setTaskArr, taskArrReverse }
+            { theme, toggleTheme, activeTaskEditor, setActiveTaskEditor, taskArr, setTaskArr, taskArrReverse, updateTaskSort, setUpdateTaskSort, activeEditWrapper, setActiveEditWrapper, taskSelect, setTaskSelect }
         }>
             {children}
         </AppContext.Provider>
