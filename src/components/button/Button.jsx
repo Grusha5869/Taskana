@@ -121,7 +121,7 @@ export const BtnDrop = ({ content, onClick }) => {
     )
 }
 
-export const BtnEdit = ({ onClick, active, setActive, activeEditWrapper, setActiveEditWrapper }) => {
+export const BtnEdit = ({ onClick, active, setActive }) => {
     return (
         <button 
             onClick={onClick}

@@ -4,13 +4,17 @@ import { useEffect, useState, useMemo } from "react";
 export const AppProvider = ({ children }) => {
     const [theme, setTheme] = useState('light');
     const [activeTaskEditor, setActiveTaskEditor] = useState(false);
-    const [taskArr, setTaskArr] = useState([]);
+    const [taskArr, setTaskArr] = useState(JSON.parse(localStorage.getItem('taskList')) || []);
     const [updateTaskSort, setUpdateTaskSort] = useState(0);
     const [activeEditWrapper, setActiveEditWrapper] = useState(false);
     const [taskSelect, setTaskSelect] = useState(null);
     const toggleTheme = () => {
         setTheme(prev => prev === 'light' ? 'dark' : 'light');
     };
+
+    useEffect(() => {
+        localStorage.setItem('taskList', JSON.stringify(taskArr))
+    }, [taskArr])
 
     useEffect(() => {
         if (theme === 'light') {

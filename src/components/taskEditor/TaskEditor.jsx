@@ -64,6 +64,7 @@ export default function TaskEditor() {
                 priority: priority, 
                 createdAt: new Date().toISOString(), 
                 updatedAt: new Date().toISOString(),
+                completed: false,
             }
         ])
         setActiveTaskEditor(false);

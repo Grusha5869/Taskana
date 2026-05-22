@@ -7,8 +7,8 @@ import { PriorityButton, BtnCreateTask, BtnCancelTask, Icon } from "@/components
 const IconName = ['ordinaryP', 'elevatedP', 'maximumP'];
 const iconNameLength = IconName.length;
 
-export default function SubTaskEditor({visible, setVisible}) {
-    const { activeTaskEditor, setActiveTaskEditor, taskArr, setTaskArr, setUpdateTaskSort, activeEditWrapper, setActiveEditWrapper, taskSelect } = useContext(AppContext);
+export default function SubTaskEditor() {
+    const { setActiveTaskEditor, setTaskArr, activeEditWrapper, setActiveEditWrapper, taskSelect } = useContext(AppContext);
     const inputRef = useRef(null);
     const [inputValue, setInputValue] = useState('');
     const [priority, setPriority] = useState(taskSelect.priority);

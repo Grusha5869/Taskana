@@ -9,7 +9,7 @@ export default function Dropdown() {
     const [storeSorting, setStoreSorting] = useState(ArrListDrop[4]);
     const [activeElemId, setActiveElemId] = useState(ArrListDrop[4].sort);
     const wrapperRef = useRef(null);
-    const { taskArr, setTaskArr, updateTaskSort } = useContext(AppContext);
+    const { setTaskArr, updateTaskSort } = useContext(AppContext);
 
     useEffect(() => {
         if (!storeSorting.sort) return
